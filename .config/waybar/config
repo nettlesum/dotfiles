@@ -1,0 +1,69 @@
+{
+  "layer": "top",
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/playerctl","pulseaudio", "network", "battery", "tray"],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1":"",
+      "2":"",
+      "3":"",
+      "4":"",
+      "5":"",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "sway/window": {
+    "max-length": 50,
+    "tooltip": false
+  },
+  "clock": {
+    "format-alt": "{:%d-%m-%Y}",
+    "tooltip": false
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "good": 100,
+      "warning": 25,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "⚠ Disconnected",
+    "interval": 5,
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "tooltip": false
+  },
+  "custom/playerctl": {
+    "format": " {}",
+    "max-length": 40,
+    "interval": 5,
+    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
+    "tooltip": false
+  }
+}

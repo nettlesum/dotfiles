@@ -1,0 +1,40 @@
+*{
+    font-family: fira code;
+}
+
+window {
+	background-color: #282828;
+	opacity: 0.95;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: #282828;
+    color: white;
+}
+
+#inner-box {
+    background-color: #282828;
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 10px;
+    background-color: #282828;
+}
+
+#text {
+padding: 5px;
+color: white;
+}
+
+#entry:nth-child(even){
+    background-color: #3c3836;
+}
+
+#entry:selected {
+    background-color: #98971a;
+}
